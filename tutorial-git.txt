@@ -1,0 +1,52 @@
+Git tutorial
+
+git instalisan
+napravim folder sa imenom projekta
+odem u folder
+
+kreiram repositorijum
+
+git init u komand promptu ili 
+sourcetree file-new-create
+
+isto je bez obzira da li vec postoji nesto u projektu ( neki fajlovi ) ili je prazan folder
+
+nastavljam da radim na projektu u visual studio code ( sa git se moze raditi iz komandne linije ili source tree ili iz vs code direktno )
+
+projekat ili samo neki njegovi delovi se cuvaju kad se neki deo projekta zavrsi ( neka logicna celina a ne svaki cas )
+
+prvi put cemo sacuvati sve ( inicijalno ) , a posle mogu sve promene ili samo neki fajlovi kako hocemo
+
+cuvanje se radi uvek ovako :
+1 faza su promenjeni fajlovi koje vidimo sa git status ( crvene su boje ) u kom promptu ili kao unstaged file u sourcetree ili kao changes u vsc
+
+2 faza je stage ( priprema za cuvanje commit ) u vsc i sourcetree ima dugmad , a u kom promptu git add imefjla ili git add . za sve fajlove
+  moze se i ponistiti sa git rm --cashed imefajla ( git rm --cached . -r  za sve) ili u vsc i sourcetree lako na dugme
+  u stage statusu fajlovi su zeleni u komand  promptu ili staged file u sourcetree ili staged changes u vsc
+
+3 faza je commit fajlova ( pravi se tacka u vremenu koja je neka logicka faza projekta , na koju se uvek moze vratiti - prva je inicijalni commit)
+
+  najnoviji ( sada prvi ) commit se uvek zove master .  napravio sam ga iz komand prompta sa : git commit -m "poruka tekst gde se opisuje taj commit"
+  svi commiti se mogu izlistati sa git log ili git log --oneline
+
+  drugi commit sam napravio iz sourcetree ( upise se poruka tekst i dugme commit ) sada je drugi master
+
+  treci commit sam napravio iz vs code ( upise se poruka i dugme commit ) sada je treci master 
+
+rad sa commitima :
+
+checkout commit - da se vidi projekat u toj tacki vremena ( read-only ) nemoze se menjati sluzi samo za pregled
+git checkout sifracommita , vratis se na zadnji sa git checkout master ( u npr vs code imas projekat u trenutku commita )
+revert commit - ponistavaju se promene koje je taj commit napravio ( ustvari napravi jos jedan najnoviji commit sa ponistenim promenama datog commita)
+git revert sifracommita , napravice ustvari jos jedan commit gde ce biti ponistene promene koje je napravio revertovan commit 
+reset commit - skroz ponistava sve commite posle datog ( cuva promene u fajlovima kao unstaged pa se mogu ponovo commitovati), ili ako dodamo 
+-hard sve vraca na dati commit sa fajlovima u datom trenutku 
+git reset sifracomita ili git reset sifracommita -hard ( gore opisana razlika )
+
+ovo sve moze i iz sourcetree ( checkout , reverse i reset )ili iz vs code (ne sve izgleda samo sa masterom radi moze undo zadnjeg commita)
+
+branch
+
+
+
+
