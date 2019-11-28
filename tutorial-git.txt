@@ -47,6 +47,24 @@ ovo sve moze i iz sourcetree ( checkout , reverse i reset )ili iz vs code (ne sv
 
 branch
 
+tacka grananja - master ostaje glavni a iz njega se pravi nova staza ili vise staza koje postaju nezavisne od mastera
+
+git branch nazivbrancha ili u sourcetree new branch
+sa git branch -a  listamo sve staze , pa se sa git checkout pozicioniramo gde hocemo da radimo , to se prati i u editoru
+moze se nastaviti raditi u masteru kao i u svim ili samo nekim branchevima , redovno commiti i sve normalno
+u branchu obicno isprobavamo nesto , a da se nedira master pa kad zavrsimo i valja mergujemo uradjeno nazad u master
+iz vs coda se moze birati u kojoj grani se radi sa checkout ( master ili neki branch )
+
+merge 
+
+tacka ponovnog spajanja - branchove spajamo u master nazad
+ode se u master sa git checkout master ili u sourcetree se namestimo na master
+pa ond git merge nazivbrancha , pa se taj branch merguje nazad u master , ako dodje do konflikta rucno resis u vs codu
+peske sredis kakav ce biti konacan fajl u masteru ( ako ima konflikta ), ide lako u vs code
+
+
+
+
 
 
 
