@@ -148,7 +148,7 @@ form input {
     margin: 20px 0;
     padding: 10px 20px;
     font-size: 24px;
-    border: white 4px solid;    /* trenutno se nevidi ali je namera da se menja boja kod hovera
+    border: white 4px solid;    /* trenutno se nevidi ali je namera da se menja boja kod hovera */
     border-radius: 28px;
 }
 
@@ -158,3 +158,49 @@ footer {
     text-align: center;
     padding: 10px 10px;
 }
+
+
+/* PSEUDO CLASSES SA : */
+
+nav li a:hover {
+    text-decoration: underline;     /* hover kada misem dodjemo iznad elementa da podvuce taj link */
+}
+
+.images li:hover {                  /* paziti na ono pre hover , npr. samo li bi dizalo sve li , samo img sve img zato pazljivo selector */
+    position: relative;             /* kada misem dodjemo iznad jedne od dve slike izdigne je malo - isto kao bottom: 10px */
+    top: -10px;                     /* zgodno za galerije slika da se zna koja se gleda */
+}
+
+form input:focus {
+    border: 4px dashed #4b4b4b;     /* kad input polje fokusiramo dobija border */
+    outline: none;
+}
+
+form input:valid {
+    border: 4px dashed green;       /* kad je polje valid border pozeleni required i ok email */
+}
+
+nav ul li:first-child a{
+ /*   color: blue;     ovako bi se npr. promenio prvi link u plavu boju da se razlikuje sto smo gore uradili sa a.join posebnom klasom */
+}   /* komentar je da bi ostala crvena */
+
+/* PSEUDO ELEMENTS SA :: */
+
+article p::first-line {         /* prva linija u selektovanom paragrafu */
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+section.join p::first-letter {
+    color: blue;                /* prvo slovo u selektovanom paragrafu */
+}
+
+section.join p::selection {
+    background-color: crimson;  /* selektovano u paragrafu namestimo bacground color */
+    color: white;
+}
+
+p::after {
+    content: '  ...';           /* ubacuje string na kraj svakog paragrafa */
+}
+
