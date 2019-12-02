@@ -204,3 +204,88 @@ p::after {
     content: '  ...';           /* ubacuje string na kraj svakog paragrafa */
 }
 
+
+/* RESPONSIVE DESIGN 
+
+VAZNO !!!  u svaku html stranicu ovo dodati na pocetak 
+
+<meta name="viewport" content="width=device-width , initial-scale=1.0">
+
+*/
+
+/*  MEDIA QUERIES  */
+/*
+@media screen and (min-width: 800px) {
+    p {
+        font-size: 50px;                 povecace font ako je viewport 800px i vece 
+    }
+}
+
+@media screen and (max-width: 1200px ) {
+    p {
+        font-size: 50px;                    povecace font ako je viewport 1200px i manje 
+    }
+}
+*/
+
+@media screen and (max-width: 1200px) {
+    .banner .welcome h2 {
+        font-size: 60px;
+    }                                       /* ako je manji od 1200px smanjujemo prevelike fontove */
+    nav li {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .banner .welcome h2 {
+        font-size: 40px;
+    }                                       /* ako je manji od 900px  jos smanjujemo preveliki font */
+    
+}
+
+/* ako je manji od 700px radimo vise stvari */
+
+@media screen and (max-width: 700px) {
+    .banner .welcome {
+        position: relative;     /* necemo da vise tekst bude preko slike nego ispod - ukidamo position:absolute i vracamo na relative
+                                   cime elemenat ponovo zauzima svoje mesto u dokumentu , a to je ispod slike */ 
+        text-align: center;     /* sav tekst sada ide u centar */
+        padding: 10px;          /* smanjujemo pading */
+    }                                      
+    
+    .banner .welcome br {
+        display: none;          /* hocu sve u jednom redu zato sklanjamo br tag za novi red - ovo ga sklanja iz doma */
+    }
+
+    .banner .welcome h2 {
+        font-size: 25px;        /* jos smanjujemo tekst */
+    }
+
+    .banner .welcome span {
+        font-size: 1em;         /* tekst u spanu izjednacavamo sa okolnim */
+    }
+
+    .images li {
+        width: 100%;            /* hocu dve slike jedna ispod druge zato umesto sirine 40% + margine 5% sirina 100% */
+        margin: 20px auto;      /* margina gore dole 20px a sa strana auto - to ga stavlja u sredinu */
+        display: block;         /* umesto inline-block sto ih stavlja jednu pored druge , vracamo block idu jedna ispod druge */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav li {
+        font-size: 24px;        /* povecavamo font koji smo smanjili na 18 da se bolje vidi jer sad nece biti u jednom redu */
+        display: block;
+        width: 100%;
+        margin: 12px auto;
+    }
+
+    header {
+        position: relative;     /* da vise heder nebude fixed top */
+    }
+
+    nav {
+        top: 0px;               /* posto sad heder ide kao i sve navigacija da se zalepi na vrh i dalje neide */
+    }
+}
