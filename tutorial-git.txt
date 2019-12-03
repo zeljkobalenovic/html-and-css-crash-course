@@ -83,7 +83,9 @@ vide se svi commiti i branchevi kao i na local - sad su lokal i remote isti
 redovno radimo na projektu , stage , commit i onda opet push kad hocemo i opet su local i remote u paru.
 
 da nebi stalno kucali dugacki url damo alias :  git remote add origin https://github.com/zeljkobalenovic/html-and-css-crash-course.git
-sada uvek umesto dugackog url kucamo origin
+sada uvek umesto dugackog url kucamo origin znaci samo git push origin master i to je to kad smo sami
+
+sve ovo moze i iz sourcetree ili vs code
 
 
 
