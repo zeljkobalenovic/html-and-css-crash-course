@@ -85,7 +85,7 @@ redovno radimo na projektu , stage , commit i onda opet push kad hocemo i opet s
 da nebi stalno kucali dugacki url damo alias :  git remote add origin https://github.com/zeljkobalenovic/html-and-css-crash-course.git
 sada uvek umesto dugackog url kucamo origin znaci samo git push origin master i to je to kad smo sami
 
-sve ovo moze i iz sourcetree ili vs code
+sve ovo moze i iz sourcetree ili vs code ( stage , commit pa push to - pa izaberem origin )
 
 
 
