@@ -62,6 +62,28 @@ ode se u master sa git checkout master ili u sourcetree se namestimo na master
 pa ond git merge nazivbrancha , pa se taj branch merguje nazad u master , ako dodje do konflikta rucno resis u vs codu
 peske sredis kakav ce biti konacan fajl u masteru ( ako ima konflikta ), ide lako u vs code
 
+GitHub
+
+servis koji sluzi za rad sa remote repositorijumima bilo da radimo sami ili sradjujemo u timu.
+
+1   kad radimo sami ( sluzi da cuvamo projekte remote , kao backup i da na projektu radimo sa vise uredjaja )
+2   kad smo u timu ( sluzi da radimo na istoj verziji projekta )
+
+prvo sam otvorio github nalog 
+
+kad radim sam :
+
+mogu da postojeci lokalni projekat kloniram na github ili da na githubu napravim repo-projekat novi , da ga kloniram na lokalnu masinu i radim 
+na tom novom projektu 
+
+napravi se na githubu novi repo za ovaj projekt , onda kopiram url tog projekta-repoa pa na lokalnom kucam git push gde(url remote) sta (master)
+nemora master moze bilo koji branch , ali ja cu master pa je naredba kao dole ( mora biti prethodno odradjen commit da nema neuskladjenih fajlova)
+git push https://github.com/zeljkobalenovic/html-and-css-crash-course.git master  trazice username i password i kad se ukuca sve je na remotu
+vide se svi commiti i branchevi kao i na local - sad su lokal i remote isti 
+redovno radimo na projektu , stage , commit i onda opet push kad hocemo i opet su local i remote u paru.
+
+da nebi stalno kucali dugacki url damo alias :  git remote add origin https://github.com/zeljkobalenovic/html-and-css-crash-course.git
+sada uvek umesto dugackog url kucamo origin
 
 
 
