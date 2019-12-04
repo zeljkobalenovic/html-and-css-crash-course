@@ -85,7 +85,37 @@ redovno radimo na projektu , stage , commit i onda opet push kad hocemo i opet s
 da nebi stalno kucali dugacki url damo alias :  git remote add origin https://github.com/zeljkobalenovic/html-and-css-crash-course.git
 sada uvek umesto dugackog url kucamo origin znaci samo git push origin master i to je to kad smo sami
 
-sve ovo moze i iz sourcetree ili vs code ( stage , commit pa push to - pa izaberem origin )
+sve ovo moze i iz sourcetree ili vs code ( stage , commit pa   to - pa izaberem origin )
+
+drugi nacin je da na github kreiramo novi projekat-repo pa onda uzmemo sa clone remote url i onda na lokalnoj masini u folderu gde hocemo da
+bude taj novi projekat kucamo git clone sta(tu ide remote url) i sad imamo i lokalno i remote isti projekt-repo , dalje radimo kao i prethodno
+razlika jedina je sto je sada automatski namesten origin alias pa odma radimo stage, commir, push i tako u krug
+
+Kolaboracija timski rad na githubu - kada vise ljudi radi na istom projektu 
+
+OBAVEZNO se prvo uradi   git pull origin master   ( git pull odakle gde ) ovo obezbedjuje da radimo na najnovijoj verziji projekta , tj. povlacimo
+pull sa remota (origina) sve u local branch master - ako su drugi u timu ili sef nesto menjali sada imamo najnoviju verziju
+
+zatim pravimo i idemo na novi branch  git checkout -b nazivbrancha  - zato sto u timu radimo, razvijamo na posebnom branchu a ne u masteru
+pa tek kad sve posaljemo zajedno sa timom ili sef projekta to merge u master-origin na remotu - tek ako je sve ok. nikad kao clan tima 
+ne radi u masteru nego u svom branchu , pa kad svi clanovi zavrse zajednicki mergujemo sta je ko uradio - svaciji branch ili to uradi sef projekta
+ VAZNO !!! nikad sami ne mergujemo rad na lokalni master pa onda push jer bi onda nas master bio na originu i sve sto drugi rade bi visilo
+zato redovno radimo na svom branchu , kad smo gotovi stage , pa commit pa push NASEG brancha , a na remotu ga posle odgovorni merguju ako je ok
+kad pushujemo nas branch na githubu se to odmah vidi i ima poruka da je dodan novi branch.  tamo idemo na compare&pull request upisemo neku poruku
+ako hocemo i idemo na create pull request , kada se kreira sada se vide svi commiti i sve izmene na fajlovima sto smo radili i svi clanovi tima ili sef mogu komentarisati sve ili neke linije komand
+takodje se vidi dali ima konflikta tj. da li se moze automatski merge u master ( ako ima konflikta tu se resavaju ) i na kraju ako je ok
+ide merge pull request , a ako nije napise se poruka sta nevalja ili sta jos treba uraditi ( ako je ok gotovi smo , a ako nije doradimo na 
+nasem lokalnom branchu sta su trazili pa opet to pushujemo na remote pa tako dok nebude ok).
+
+Kad smo jedno zavrsili ok je i hocemo da radimo nesto drugo obavezno ponovo na povuci najnoviju verziju sa git pull origin master , ako to ne uradimo
+onda se recimo nece videti sta smo malopre uradili u branchu koji smo prethodno push , jer je lokalni master pre tog prvog zadatka
+onda opet napravimo novi branch , radimo na novom zadatku i tako u krug.
+
+sve ovo moze lakse iz sourcetree i vs code
+
+git i github imaju svasta , ali ovo je glavno 
+
+kraj
 
 
 
